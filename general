@@ -1,0 +1,21 @@
+
+terraform init — Prepare the working directory for use with Terraform
+terraform init -get-plugins=false — Initialize the working directory, do not download plugins
+
+terraform get — Downloads and installs modules needed for the configuration
+terraform get -update — installs the newer versions if available
+terraform validate — Validates the configuration files
+terraform plan — Plan will generate an execution plan
+terraform plan -out=<path> — Save the plan file to a given path
+terraform plan -destroy — Creates a plan to destroy all objects
+
+terraform apply — Creates or updates infrastructure depending on the configuration files
+terraform apply -auto-approve — Apply changes without having to interactively type ‘yes’ to the plan
+
+terraform apply -var="domainpassword=password123" — Pass in a variable value.
+terraform apply -var-file="varfile.tfvars" — Pass in variables contained in a file
+
+terraform destroy — Destroys the infrastructure managed by Terraform
+
+terraform workspace show — Show the name of the current workspace
+terraform workspace list — List your workspaces
